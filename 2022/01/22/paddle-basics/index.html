@@ -18,12 +18,12 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="0 安装与检查12import paddleprint(paddle.__vision__)  1 数据集定义与加载1.1 自定义数据集paddle.io.Dataset 1234567891011121314151617181920212223242526272829303132import paddlefrom paddle.io import DatasetBATCH_SIZE &#x3D; 64BA">
+    <meta name="description" content="0 安装与检查 12import paddleprint(paddle.__vision__) 1 数据集定义与加载 1.1 自定义数据集 paddle.io.Dataset 1234567891011121314151617181920212223242526272829303132import paddlefrom paddle.io import DatasetBATCH_SIZE &#x3D; 64">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paddle基础">
 <meta property="og:url" content="https://gequanyi.xyz/2022/01/22/paddle-basics/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="0 安装与检查12import paddleprint(paddle.__vision__)  1 数据集定义与加载1.1 自定义数据集paddle.io.Dataset 1234567891011121314151617181920212223242526272829303132import paddlefrom paddle.io import DatasetBATCH_SIZE &#x3D; 64BA">
+<meta property="og:description" content="0 安装与检查 12import paddleprint(paddle.__vision__) 1 数据集定义与加载 1.1 自定义数据集 paddle.io.Dataset 1234567891011121314151617181920212223242526272829303132import paddlefrom paddle.io import DatasetBATCH_SIZE &#x3D; 64">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-22T00:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-12T15:09:22.627Z">
@@ -192,7 +192,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210131029978.webp') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -239,6 +239,14 @@
 
     
     
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -272,12 +280,22 @@
             <!-- SEO header -->
             <h1 style="display: none">Paddle基础</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年10月12日 晚上
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h1 id="0-安装与检查"><a href="#0-安装与检查" class="headerlink" title="0 安装与检查"></a>0 安装与检查</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import paddle<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(paddle.__vision__)</span></span><br></code></pre></td></tr></table></figure>
-
-<h1 id="1-数据集定义与加载"><a href="#1-数据集定义与加载" class="headerlink" title="1 数据集定义与加载"></a>1 数据集定义与加载</h1><h2 id="1-1-自定义数据集"><a href="#1-1-自定义数据集" class="headerlink" title="1.1 自定义数据集"></a>1.1 自定义数据集</h2><p><strong>paddle.io.Dataset</strong></p>
+                <h1>0 安装与检查</h1>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import paddle<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(paddle.__vision__)</span></span><br></code></pre></td></tr></table></figure>
+<h1>1 数据集定义与加载</h1>
+<h2 id="1-1-自定义数据集">1.1 自定义数据集</h2>
+<p><strong>paddle.io.Dataset</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> paddle<br><span class="hljs-keyword">from</span> paddle.io <span class="hljs-keyword">import</span> Dataset<br><br>BATCH_SIZE = <span class="hljs-number">64</span><br>BATCH_NUM = <span class="hljs-number">10</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDataset</span>(<span class="hljs-title class_ inherited__">Dataset</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    步骤一：继承paddle.io.Dataset类</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, num_samples</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        步骤二：实现构造函数，定义数据集大小</span><br><span class="hljs-string">        &quot;&quot;&quot;</span>     <br>        <br>        <span class="hljs-built_in">super</span>(MyDataset, self).__init__()<br>        self.num_samples = num_samples<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, index</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        步骤三：实现__getitem__方法，定义指定index时如何获取数据，并返回单条数据（训练数据，对应的标签）</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        data = paddle.uniform(IMAGE_SIZE, dtype=<span class="hljs-string">&#x27;float32&#x27;</span>)<br>        label = paddle.randint(<span class="hljs-number">0</span>, CLASS_NUM-<span class="hljs-number">1</span>, dtype=<span class="hljs-string">&#x27;int64&#x27;</span>)<br><br>        <span class="hljs-keyword">return</span> data, label<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        步骤四：实现__len__方法，返回数据集总数目</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> self.num_samples<br></code></pre></td></tr></table></figure>
                 
               </div>
@@ -339,6 +357,11 @@
           <div>2022年1月22日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月12日</div>
+        </div>
       
       
         <div class="license-meta-item">

@@ -18,12 +18,12 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1 换源备份源 1sudo cp &#x2F;etc&#x2F;apt&#x2F;source.list &#x2F;etc&#x2F;apt&#x2F;source&#x2F;list.bak 换源(阿里云网址：https:&#x2F;&#x2F;developer.aliyun.com&#x2F;mirror&#x2F;ubuntu) 1sudo vim &#x2F;etc&#x2F;apt&#x2F;source.list 更换为16.04 12345678910111213141516deb http:&#x2F;&#x2F;mirrors.al">
+    <meta name="description" content="1 换源 备份源 1sudo cp &#x2F;etc&#x2F;apt&#x2F;source.list &#x2F;etc&#x2F;apt&#x2F;source&#x2F;list.bak 换源(阿里云网址：https:&#x2F;&#x2F;developer.aliyun.com&#x2F;mirror&#x2F;ubuntu) 1sudo vim &#x2F;etc&#x2F;apt&#x2F;source.list 更换为 16.04 12345678910111213141516deb http:&#x2F;&#x2F;mirrors.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu常用命令">
 <meta property="og:url" content="https://gequanyi.xyz/2022/04/17/Ubuntu-Tips/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="1 换源备份源 1sudo cp &#x2F;etc&#x2F;apt&#x2F;source.list &#x2F;etc&#x2F;apt&#x2F;source&#x2F;list.bak 换源(阿里云网址：https:&#x2F;&#x2F;developer.aliyun.com&#x2F;mirror&#x2F;ubuntu) 1sudo vim &#x2F;etc&#x2F;apt&#x2F;source.list 更换为16.04 12345678910111213141516deb http:&#x2F;&#x2F;mirrors.al">
+<meta property="og:description" content="1 换源 备份源 1sudo cp &#x2F;etc&#x2F;apt&#x2F;source.list &#x2F;etc&#x2F;apt&#x2F;source&#x2F;list.bak 换源(阿里云网址：https:&#x2F;&#x2F;developer.aliyun.com&#x2F;mirror&#x2F;ubuntu) 1sudo vim &#x2F;etc&#x2F;apt&#x2F;source.list 更换为 16.04 12345678910111213141516deb http:&#x2F;&#x2F;mirrors.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-17T15:39:00.000Z">
 <meta property="article:modified_time" content="2022-10-12T15:10:13.520Z">
@@ -192,7 +192,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210131029978.webp') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -239,6 +239,14 @@
 
     
     
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -272,24 +280,34 @@
             <!-- SEO header -->
             <h1 style="display: none">Ubuntu常用命令</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年10月12日 晚上
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h1 id="1-换源"><a href="#1-换源" class="headerlink" title="1 换源"></a>1 换源</h1><p>备份源</p>
+                <h1>1 换源</h1>
+<p>备份源</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">cp</span> /etc/apt/source.list /etc/apt/source/list.bak<br></code></pre></td></tr></table></figure>
 <p>换源(阿里云网址：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/ubuntu">https://developer.aliyun.com/mirror/ubuntu</a>)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/apt/source.list<br></code></pre></td></tr></table></figure>
-<p>更换为<br>16.04</p>
+<p>更换为<br>
+16.04</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">deb http://mirrors.aliyun.com/ubuntu/ xenial main<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial main<br><br>deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main<br><br>deb http://mirrors.aliyun.com/ubuntu/ xenial universe<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial universe<br>deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates universe<br><br>deb http://mirrors.aliyun.com/ubuntu/ xenial-security main<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main<br>deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe<br>deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security universe<br><br></code></pre></td></tr></table></figure>
 <p>18.04</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse<br><br></code></pre></td></tr></table></figure>
 <p>20.04</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br><br>deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br>deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br><br></code></pre></td></tr></table></figure>
-
 <p>更新</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt update &amp;&amp; sudo apt upgrade<br></code></pre></td></tr></table></figure>
-
-<h1 id="2-创建桌面自启程序"><a href="#2-创建桌面自启程序" class="headerlink" title="2 创建桌面自启程序"></a>2 创建桌面自启程序</h1><h1 id="3-Ubuntu设置静态IP"><a href="#3-Ubuntu设置静态IP" class="headerlink" title="3 Ubuntu设置静态IP"></a>3 Ubuntu设置静态IP</h1><p>安装net-tools</p>
+<h1>2 创建桌面自启程序</h1>
+<h1>3 Ubuntu设置静态IP</h1>
+<p>安装net-tools</p>
 <p>查看网卡</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ifconfig<br></code></pre></td></tr></table></figure>
 <p>示例：</p>
@@ -361,6 +379,11 @@
           <div>2022年4月17日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月12日</div>
+        </div>
       
       
         <div class="license-meta-item">

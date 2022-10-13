@@ -18,12 +18,12 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="trojan-go 搭建记录 致谢youtube博主  不良林  安装  VPS重装系统，不要安装任何nginx，acme申请证书会用到  BBR加速1bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;kernel.sh)  安装trojan-go最好在根目录下建个文件夹 12mkdir trojan-gocd trojan-go  这里使用新发布的更新指纹的最新发行版 致">
+    <meta name="description" content="trojan-go 搭建记录  致谢youtube博主  不良林  安装  VPS重装系统，不要安装任何nginx，acme申请证书会用到  BBR加速 1bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;kernel.sh) 安装trojan-go 最好在根目录下建个文件夹 12mkdir trojan-gocd trojan-go 这里使用新发布的更新指纹的最新发行版">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Trojan go 记录">
 <meta property="og:url" content="https://gequanyi.xyz/2022/10/06/Trojan-Go-Build/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="trojan-go 搭建记录 致谢youtube博主  不良林  安装  VPS重装系统，不要安装任何nginx，acme申请证书会用到  BBR加速1bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;kernel.sh)  安装trojan-go最好在根目录下建个文件夹 12mkdir trojan-gocd trojan-go  这里使用新发布的更新指纹的最新发行版 致">
+<meta property="og:description" content="trojan-go 搭建记录  致谢youtube博主  不良林  安装  VPS重装系统，不要安装任何nginx，acme申请证书会用到  BBR加速 1bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;kernel.sh) 安装trojan-go 最好在根目录下建个文件夹 12mkdir trojan-gocd trojan-go 这里使用新发布的更新指纹的最新发行版">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111545651.webp">
 <meta property="article:published_time" content="2022-10-06T02:17:00.000Z">
@@ -194,7 +194,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210131029978.webp') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -241,6 +241,14 @@
 
     
     
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -274,85 +282,74 @@
             <!-- SEO header -->
             <h1 style="display: none">Trojan go 记录</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年10月12日 晚上
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <p><img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111545651.webp" srcset="/img/loading.gif" lazyload></p>
-<h1 id="trojan-go-搭建记录"><a href="#trojan-go-搭建记录" class="headerlink" title="trojan-go 搭建记录"></a>trojan-go 搭建记录</h1><blockquote>
+                <p><img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111545651.webp" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>trojan-go 搭建记录</h1>
+<blockquote>
 <p>致谢youtube博主  <a target="_blank" rel="noopener" href="https://www.youtube.com/c/%E4%B8%8D%E8%89%AF%E6%9E%97">不良林</a></p>
 </blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p> VPS重装系统，不要安装任何nginx，acme申请证书会用到</p>
+<h2 id="安装">安装</h2>
+<blockquote>
+<p>VPS重装系统，不要安装任何nginx，acme申请证书会用到</p>
 </blockquote>
-<h2 id="BBR加速"><a href="#BBR加速" class="headerlink" title="BBR加速"></a>BBR加速</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(curl -Lso- https://git.io/kernel.sh)<br></code></pre></td></tr></table></figure>
-
-<h3 id="安装trojan-go"><a href="#安装trojan-go" class="headerlink" title="安装trojan-go"></a>安装trojan-go</h3><p>最好在根目录下建个文件夹</p>
+<h2 id="BBR加速">BBR加速</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(curl -Lso- https://git.io/kernel.sh)<br></code></pre></td></tr></table></figure>
+<h3 id="安装trojan-go">安装trojan-go</h3>
+<p>最好在根目录下建个文件夹</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir trojan-go<br>cd trojan-go<br></code></pre></td></tr></table></figure>
-
 <p>这里使用新发布的更新指纹的最新发行版</p>
 <p>致谢原作者 <a target="_blank" rel="noopener" href="https://github.com/p4gefau1t/trojan-go">p4gefau1t</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://github.com/gfw-report/trojan-go/releases/download/v0.10.7/trojan-go-linux-amd64.zip<br></code></pre></td></tr></table></figure>
-
 <p>其他发行版详见连接<a target="_blank" rel="noopener" href="https://github.com/gfw-report/trojan-go/releases/tag/v0.10.7"></a><br></p>
 <p>解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">unzip trojan-go-linux-amd64.zip<br></code></pre></td></tr></table></figure>
-
 <p>可以查看解压后的文件。<br></p>
 <p>准备配置文件,完整版可见<a target="_blank" rel="noopener" href="https://p4gefau1t.github.io/trojan-go/basic/full-config/"></a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd ./examples &amp;&amp; cp server.json ../<br></code></pre></td></tr></table></figure>
-
 <p>这里记录下本次使用的配置文件config.json</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;run_type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;server&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;local_addr&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;0.0.0.0&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;local_port&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">443</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;remote_addr&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;192.83.167.78&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;remote_port&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">80</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;log_level&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;log_file&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/root/trojan-go/trojan-go.log&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;password&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;pass&quot;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;ssl&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;cert&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/root/trojan-go/server.crt&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;key&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/root/trojan-go/server.key&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;sni&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;yours.com&quot;</span><span class="hljs-punctuation">,</span><br>	<span class="hljs-attr">&quot;fingerprint&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Chrome&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;router&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;block&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>            <span class="hljs-string">&quot;geoip:private&quot;</span><br>        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;geoip&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/usr/share/trojan-go/geoip.dat&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;geosite&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/usr/share/trojan-go/geosite.dat&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;websocket&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/ABDCD&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;hostname&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;yours.com&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br><br></code></pre></td></tr></table></figure>
-
 <p>此时基本安装工作完成，需要完善配置文件中的内容</p>
-<h3 id="申请证书cd"><a href="#申请证书cd" class="headerlink" title="申请证书cd"></a>申请证书cd</h3><blockquote>
+<h3 id="申请证书cd">申请证书cd</h3>
+<blockquote>
 <p>申请证书流程可用别的方法</p>
 </blockquote>
-<p>这里使用acme.sh</p>
+<p><a target="_blank" rel="noopener" href="http://xn--acme-9s6fu80rtbzbcjd.sh">这里使用acme.sh</a></p>
 <p>安装acme</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl https://get.acme.sh | sh<br></code></pre></td></tr></table></figure>
-
 <p>安装socat</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt install socat<br></code></pre></td></tr></table></figure>
-
 <p>添加软连接（环境变量)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ln -s  /root/.acme.sh/acme.sh /usr/local/bin/acme.sh<br></code></pre></td></tr></table></figure>
-
 <p>注册账号(使用自己邮箱)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">acme.sh --register-account -m my@example.com<br></code></pre></td></tr></table></figure>
-
 <p>开放防火墙</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">ufw allow 80<br>ufw allow 443<br></code></pre></td></tr></table></figure>
-
 <p>申请证书</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">acme.sh  --issue -d 你的域名  --standalone -k ec-256<br></code></pre></td></tr></table></figure>
-
 <p>安装证书(根据情况修改路径)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">acme.sh --installcert -d 你的域名 --ecc  --key-file   /root/trojan-go/server.key   --fullchain-file /root/trojan-go/server.crt <br></code></pre></td></tr></table></figure>
-
 <p><strong>至此，配置文件需要的准备完成</strong>，还需要注意geoip路径</p>
-<p>在&#x2F;root&#x2F;trojan-go目录下</p>
+<p>在/root/trojan-go目录下</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">./trojan-go -config config.json<br></code></pre></td></tr></table></figure>
-
 <p>将会启动成功</p>
-<h2 id="添加守护进程"><a href="#添加守护进程" class="headerlink" title="添加守护进程"></a>添加守护进程</h2><p>在example下可以发现提供的service文件，根据需要修改</p>
+<h2 id="添加守护进程">添加守护进程</h2>
+<p>在example下可以发现提供的service文件，根据需要修改</p>
 <p>放入<code>/etc/systemd/system/trojan-go.service</code>   . (根据实际修改文件路径)</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Unit]</span><br><span class="hljs-attr">Description</span>=Trojan-Go - An unidentifiable mechanism that helps you bypass GFW<br><span class="hljs-attr">Documentation</span>=https://p4gefau1t.github.io/trojan-go/<br><span class="hljs-attr">After</span>=network.target nss-lookup.target<br><br><span class="hljs-section">[Service]</span><br><span class="hljs-attr">User</span>=root<br><span class="hljs-attr">CapabilityBoundingSet</span>=CAP_NET_ADMIN CAP_NET_BIND_SERVICE<br><span class="hljs-attr">AmbientCapabilities</span>=CAP_NET_ADMIN CAP_NET_BIND_SERVICE<br><span class="hljs-attr">NoNewPrivileges</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">ExecStart</span>=/usr/bin/trojan-go -config /etc/trojan-go/config.json<br><span class="hljs-attr">Restart</span>=<span class="hljs-literal">on</span>-failure<br><span class="hljs-attr">RestartSec</span>=<span class="hljs-number">10</span>s<br><span class="hljs-attr">LimitNOFILE</span>=infinity<br><br><span class="hljs-section">[Install]</span><br><span class="hljs-attr">WantedBy</span>=multi-user.target<br><br></code></pre></td></tr></table></figure>
-
 <p>然后</p>
 <figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nsis"><span class="hljs-params">system</span>ctl daemon-reload<br><span class="hljs-params">system</span>ctl enable trojan-go.service<br><span class="hljs-params">system</span>ctl start trojan-go.service<br></code></pre></td></tr></table></figure>
-
 <p>查看运行状态</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">systemctl <span class="hljs-built_in">status</span> trojan-<span class="hljs-built_in">go</span>.service<br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
 
                 
               </div>
@@ -414,6 +411,11 @@
           <div>2022年10月6日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月12日</div>
+        </div>
       
       
         <div class="license-meta-item">

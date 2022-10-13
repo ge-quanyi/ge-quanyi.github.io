@@ -18,12 +18,12 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="腾讯云COS腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。 购买使用COS官方地址点这里对象存储COS   购买完资源包后。进入控制台-对象存储  开始创建存储桶     名称自己设定，访问权限改为公有读私有写，后面的基本保持默认即可   返回存储桶">
+    <meta name="description" content="腾讯云COS 腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。 购买使用COS 官方地址点这里对象存储COS  购买完资源包后。进入控制台-对象存储  开始创建存储桶    名称自己设定，访问权限改为公有读私有写，后面的基本保持默认即可    返回存储">
 <meta property="og:type" content="article">
 <meta property="og:title" content="腾讯云COS+PicGo搭建图床">
 <meta property="og:url" content="https://gequanyi.xyz/2022/10/11/Tencent-cos-img-bed/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="腾讯云COS腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。 购买使用COS官方地址点这里对象存储COS   购买完资源包后。进入控制台-对象存储  开始创建存储桶     名称自己设定，访问权限改为公有读私有写，后面的基本保持默认即可   返回存储桶">
+<meta property="og:description" content="腾讯云COS 腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。 购买使用COS 官方地址点这里对象存储COS  购买完资源包后。进入控制台-对象存储  开始创建存储桶    名称自己设定，访问权限改为公有读私有写，后面的基本保持默认即可    返回存储">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111607382.webp">
 <meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111609370.webp">
@@ -197,7 +197,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210131029978.webp') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -244,6 +244,14 @@
 
     
     
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -277,39 +285,50 @@
             <!-- SEO header -->
             <h1 style="display: none">腾讯云COS+PicGo搭建图床</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年10月12日 晚上
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h1 id="腾讯云COS"><a href="#腾讯云COS" class="headerlink" title="腾讯云COS"></a>腾讯云COS</h1><p>腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。</p>
-<h2 id="购买使用COS"><a href="#购买使用COS" class="headerlink" title="购买使用COS"></a>购买使用COS</h2><p>官方地址点这里<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/cos">对象存储COS</a></p>
+                <h1>腾讯云COS</h1>
+<p>腾讯云COS是对象存储服务，使用它的原因是在折腾完各种博客之后发现gitpages的劣势就是加载图片太慢（之前使用github+j作为图床），现在正好尝试cos。新人可以一元一年，流量基本用不完。</p>
+<h2 id="购买使用COS">购买使用COS</h2>
+<p>官方地址点这里<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/cos">对象存储COS</a></p>
 <img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111607382.webp" srcset="/img/loading.gif" lazyload style="zoom: 50%;" />
-
 <p>购买完资源包后。进入控制台-对象存储</p>
 <ul>
 <li>开始创建存储桶</li>
 </ul>
 <img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111609370.webp" srcset="/img/loading.gif" lazyload style="zoom:80%;" />
-
 <blockquote>
 <p>名称自己设定，访问权限改为<strong>公有读私有写</strong>，后面的基本保持默认即可</p>
 </blockquote>
 <ul>
-<li><p>返回存储桶界面，进入密匙管理，新建密钥</p>
-<img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111612045.webp" srcset="/img/loading.gif" lazyload  /></li>
+<li>
+<p>返回存储桶界面，进入密匙管理，新建密钥</p>
+<img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111612045.webp" srcset="/img/loading.gif" lazyload  />
+</li>
 </ul>
 <p>记录下<code>SecretID, SecretKey, APPID</code>等信息，并注意保密。</p>
-<h2 id="安装使用PicGo"><a href="#安装使用PicGo" class="headerlink" title="安装使用PicGo"></a>安装使用PicGo</h2><blockquote>
+<h2 id="安装使用PicGo">安装使用PicGo</h2>
+<blockquote>
 <p>A simple &amp; beautiful tool for pictures uploading built by vue-cli-electron-builder</p>
 </blockquote>
 <p>github地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">https://github.com/Molunerfinn/PicGo</a></p>
 <p>最新版release: <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0">https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0</a></p>
 <img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111618971.webp" srcset="/img/loading.gif" lazyload style="zoom:67%;" />
-
 <p>选择适合你系统的版本，并安装。</p>
-<h3 id="设置Tencent-COS"><a href="#设置Tencent-COS" class="headerlink" title="设置Tencent COS"></a>设置Tencent COS</h3><blockquote>
+<h3 id="设置Tencent-COS">设置Tencent COS</h3>
+<blockquote>
 <p>建议安装插件webp，可以以较小的占用空间存教优的图像。</p>
 </blockquote>
-<p><img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111621978.webp" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210111621978.webp" srcset="/img/loading.gif" lazyload alt=""></p>
 <ul>
 <li>前五项均为腾讯云固有信息，填入即可</li>
 <li>存储路径为自定义，必须以<code>/</code>，结尾，点击确定并设置为默认图床即可。</li>
@@ -348,6 +367,11 @@
           <div>2022年10月11日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月12日</div>
+        </div>
       
       
         <div class="license-meta-item">
