@@ -18,18 +18,21 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="面向对象高级编程（一） 头文件与类的声明 一些需要注意的点 12#include &lt;iostream&gt;#include &quot;complex.h&quot; 包含的库的文件用&lt;&gt;,包含用户自己建立的文件用&quot;&quot;,延伸文件名不一定是.h或.cpp，也有可能是 .hpp或其他或甚至无延伸名。 Header（头文件）中的防卫式声明 例如complex.h">
+    <meta name="description" content="面向对象高级编程（一） [TOC] 头文件与类的声明 一些需要注意的点 12#include &lt;iostream&gt;#include &quot;complex.h&quot; 包含的库的文件用&lt;&gt;,包含用户自己建立的文件用&quot;&quot;,延伸文件名不一定是.h或.cpp，也有可能是 .hpp或其他或甚至无延伸名。 Header（头文件）中的防卫式声明 例如comp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【C++侯捷】-面向对象编程（一）">
 <meta property="og:url" content="https://gequanyi.xyz/2022/10/13/C-houjie-1/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="面向对象高级编程（一） 头文件与类的声明 一些需要注意的点 12#include &lt;iostream&gt;#include &quot;complex.h&quot; 包含的库的文件用&lt;&gt;,包含用户自己建立的文件用&quot;&quot;,延伸文件名不一定是.h或.cpp，也有可能是 .hpp或其他或甚至无延伸名。 Header（头文件）中的防卫式声明 例如complex.h">
+<meta property="og:description" content="面向对象高级编程（一） [TOC] 头文件与类的声明 一些需要注意的点 12#include &lt;iostream&gt;#include &quot;complex.h&quot; 包含的库的文件用&lt;&gt;,包含用户自己建立的文件用&quot;&quot;,延伸文件名不一定是.h或.cpp，也有可能是 .hpp或其他或甚至无延伸名。 Header（头文件）中的防卫式声明 例如comp">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210141731778.webp">
+<meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210171718953.webp">
 <meta property="article:published_time" content="2022-10-13T13:49:28.000Z">
-<meta property="article:modified_time" content="2022-10-13T13:52:42.028Z">
+<meta property="article:modified_time" content="2022-10-17T09:29:24.081Z">
 <meta property="article:author" content="aididiz">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210141731778.webp">
   
   
   
@@ -238,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          3.6k 字
         
       </span>
     
@@ -249,7 +252,7 @@
         
         
         
-          18 分钟
+          30 分钟
         
       </span>
     
@@ -300,7 +303,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月13日 晚上
+                    本文最后更新于：2022年10月17日 下午
                   
                 
               </p>
@@ -309,6 +312,7 @@
               <div class="markdown-body">
                 
                 <h1>面向对象高级编程（一）</h1>
+<p>[TOC]</p>
 <h2 id="头文件与类的声明">头文件与类的声明</h2>
 <h3 id="一些需要注意的点">一些需要注意的点</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;complex.h&quot;</span></span><br></code></pre></td></tr></table></figure>
@@ -360,7 +364,51 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">complex</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">complex</span> (<span class="hljs-type">double</span> r = <span class="hljs-number">0</span>, <span class="hljs-type">double</span> i = <span class="hljs-number">0</span>)<br>	: <span class="hljs-built_in">re</span>(r), <span class="hljs-built_in">im</span>(i)<br>	&#123;&#125;<br>	complex&amp; <span class="hljs-keyword">operator</span> +=(<span class="hljs-type">const</span> complex&amp;);<br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">real</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123;<span class="hljs-keyword">return</span> re;&#125;<br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">imag</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123;<span class="hljs-keyword">return</span> im;&#125;<br>	<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">double</span> re, im;<br>	<span class="hljs-keyword">friend</span> complex&amp; __doapl(complex*, <span class="hljs-type">const</span> complex&amp;);<br><br>&#125;;<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>Class中的函数分为可以改变数据内容和不能改变数据内容的，不会改变 数据内容的马上加上<code>const</code>。</p>
+<p>可以加的话一定加。</p>
 </blockquote>
+<p>两个例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//加的话</span><br>&#123;<br>    <span class="hljs-function">complex <span class="hljs-title">c1</span><span class="hljs-params">(<span class="hljs-number">2</span>,<span class="hljs-number">1</span>)</span></span>;<br>    cout &lt;&lt; c1.<span class="hljs-built_in">real</span>();<br>    cout &lt;&lt; c1.<span class="hljs-built_in">imag</span>();<br>&#125;<span class="hljs-comment">//是没有问题的</span><br><br><span class="hljs-comment">//假如不加，但是使用者这样定义常量</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-type">const</span> complex <span class="hljs-title">c1</span><span class="hljs-params">(<span class="hljs-number">2</span>,<span class="hljs-number">1</span>)</span></span>; <span class="hljs-comment">//定义一个常量</span><br>    cout &lt;&lt; c1.<span class="hljs-built_in">real</span>();<br>    cout &lt;&lt; c1.<span class="hljs-built_in">imag</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>上述情况（即定义时不加const， 但是使用者在定义时加了const），意思是我在定义时表明变量数据会改变，但是使用者加const指出这个值不能改变，这样将产生冲突。编译器会发出一些信息。</p>
+</blockquote>
+<h2 id="参数传递：pass-by-value-vs-pass-by-reference-to-const">参数传递：pass by value vs. pass by reference(to const)</h2>
+<img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210141731778.webp" srcset="/img/loading.gif" lazyload alt="image-20221014173114619" style="zoom: 67%;" />
+<p>尽量不要使用pass by value， 像传包一样把整体传过去。<code>by reference</code>，传递地址。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs C++">&#123;<br>    <span class="hljs-function">complex <span class="hljs-title">c1</span><span class="hljs-params">(<span class="hljs-number">2</span>,<span class="hljs-number">1</span>)</span></span>;<br>    complex c2;<br>    <br>    c2 += c1;<br>    cout &lt;&lt; c2;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="返回值传递">返回值传递</h2>
+<blockquote>
+<p>return by value vs. return by reference(to const)</p>
+</blockquote>
+<p>如果可以的话， 返回值传递也尽量<code>by reference</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">complex</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">complex</span>(<span class="hljs-type">double</span> r = <span class="hljs-number">0.</span> <span class="hljs-type">double</span> i = <span class="hljs-number">0</span>)<br>        : <span class="hljs-built_in">re</span>(r), <span class="hljs-built_in">im</span>(i)<br>        &#123;&#125;<br>    complex&amp; <span class="hljs-keyword">operator</span> += (<span class="hljs-type">const</span> complex&amp;);<br>    <span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">real</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123;<span class="hljs-keyword">return</span> re;&#125;<br>    <span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">imag</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123;<span class="hljs-keyword">return</span> im;&#125;<br><span class="hljs-keyword">private</span>:<br>    <span class="hljs-type">double</span> re,im;<br>    <span class="hljs-keyword">friend</span> complex&amp; __doapl(complex*, <span class="hljs-type">const</span> complex&amp;);<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="友元">友元</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">inline</span> complex&amp;<br>    __doapl (complex* ths, <span class="hljs-type">const</span> complex&amp;r)<br>&#123;<br>    ths-&gt; re += r.re;<br>    ths-&gt; im += r.im;<br>    <span class="hljs-keyword">return</span> *ths;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="相同class的各个objects互为友元（friend）">相同class的各个objects互为友元（friend）</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">complex</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">xxx</span><br><span class="hljs-function">        </span><br><span class="hljs-function">    <span class="hljs-type">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-type">const</span> complex&amp; param)</span></span><br><span class="hljs-function">    </span>&#123; <span class="hljs-keyword">return</span> param.re + param.im;&#125;<br><span class="hljs-keyword">private</span>:<br>    <span class="hljs-type">double</span> re, im;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>知道为什么</p>
+</blockquote>
+<h2 id="class-body-外的各种定义（definitions）">class body 外的各种定义（definitions）</h2>
+<blockquote>
+<p>探讨什么情况下可以``pass by reference`</p>
+<p>什么情况下可以<code>return by reference</code></p>
+</blockquote>
+<img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210171718953.webp" srcset="/img/loading.gif" lazyload alt="image-20221017171759989" style="zoom:67%;" />
+<p><strong>return</strong></p>
+<ul>
+<li>假如产生结果需要存储在函数内部新开辟的local变量里，则不可以，因为离开函数区变量将销毁；</li>
+<li>若生成结果是对已有变量（内存空间）进行修改，则可以，如上图。</li>
+</ul>
+<p>参数的传递或返回值的传递首先考虑引用(reference)，然后再考虑有没有问题。</p>
+<h2 id="Summary">Summary</h2>
+<p><strong>对于一个class</strong></p>
+<ul>
+<li>数据一定封装在private里</li>
+<li>参数尽可能是<code>pass by reference</code></li>
+<li>返回时也尽量<code>pass by reference</code></li>
+<li>类的本体能加const就加const</li>
+<li>默认构造函数的实现</li>
+</ul>
 
                 
               </div>
@@ -425,7 +473,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年10月13日</div>
+          <div>2022年10月17日</div>
         </div>
       
       
