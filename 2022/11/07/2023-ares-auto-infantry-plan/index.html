@@ -18,23 +18,34 @@
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Sharing and Recording">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://gequanyi.xyz/archives/2022/10/index.html">
+    <meta name="description" content="Ares 2023赛季自动步兵（哨兵）技术方案 0. 概述 1. 机械 技术路线 （比较常规的可以简写） 成本核算 2. 硬件 3. 电控 4. 算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ares 2023赛季自动步兵（哨兵）技术方案">
+<meta property="og:url" content="https://gequanyi.xyz/2022/11/07/2023-ares-auto-infantry-plan/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="Sharing and Recording">
+<meta property="og:description" content="Ares 2023赛季自动步兵（哨兵）技术方案 0. 概述 1. 机械 技术路线 （比较常规的可以简写） 成本核算 2. 硬件 3. 电控 4. 算法">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/RM.webp">
+<meta property="article:published_time" content="2022-11-07T02:26:41.000Z">
+<meta property="article:modified_time" content="2022-11-07T02:41:16.423Z">
 <meta property="article:author" content="aididiz">
+<meta property="article:tag" content="rm">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/RM.webp">
   
   
   
-  <title>归档 - Quanyi Blog</title>
+  <title>Ares 2023赛季自动步兵（哨兵）技术方案 - Quanyi Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -101,7 +112,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -200,15 +211,63 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210131029978.webp') no-repeat center center; background-size: cover;">
+     style="background: url('https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202210291508630.webp') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="Ares 2023赛季自动步兵（哨兵）技术方案"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-07 10:26" pubdate>
+          2022年11月7日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          61 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          1 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span>次
+        </span>
+        
+      
+    
+  </div>
+
 
         
       </div>
@@ -224,82 +283,203 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 15 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2022</p>
-    
-    <a href="/2022/10/29/RM-zju/" class="list-group-item list-group-item-action">
-      <time>10-29</time>
-      <div class="list-group-item-title">RM2023技术答辩-浙江大学</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Ares 2023赛季自动步兵（哨兵）技术方案</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年11月7日 上午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1>Ares 2023赛季自动步兵（哨兵）技术方案</h1>
+<h2 id="0-概述">0. 概述</h2>
+<h2 id="1-机械">1. 机械</h2>
+<h3 id="技术路线">技术路线</h3>
+<p>（比较常规的可以简写）</p>
+<h3 id="成本核算">成本核算</h3>
+<h2 id="2-硬件">2. 硬件</h2>
+<h2 id="3-电控">3. 电控</h2>
+<h2 id="4-算法">4. 算法</h2>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
   
     
-    <a href="/2022/10/29/RM-dalianJT/" class="list-group-item list-group-item-action">
-      <time>10-29</time>
-      <div class="list-group-item-title">RM2023技术答辩-大连交通</div>
-    </a>
+      <span class="category-chain">
+        
+  <a href="/categories/RM/" class="category-chain-item">RM</a>
   
+  
+
+      </span>
     
-    <a href="/2022/10/19/ROS-turial/" class="list-group-item list-group-item-action">
-      <time>10-19</time>
-      <div class="list-group-item-title">ROS快速入门</div>
-    </a>
   
-    
-    <a href="/2022/10/18/C-houjie-2/" class="list-group-item list-group-item-action">
-      <time>10-18</time>
-      <div class="list-group-item-title">【C++侯捷】面向对象高级编程（二）</div>
-    </a>
+</span>
+
+    </div>
   
-    
-    <a href="/2022/10/13/C-houjie-1/" class="list-group-item list-group-item-action">
-      <time>10-13</time>
-      <div class="list-group-item-title">【C++侯捷】-面向高级对象编程（一）</div>
-    </a>
   
-    
-    <a href="/2022/10/11/Tencent-cos-img-bed/" class="list-group-item list-group-item-action">
-      <time>10-11</time>
-      <div class="list-group-item-title">腾讯云COS+PicGo搭建图床</div>
-    </a>
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/rm/">#rm</a>
+      
+    </div>
   
-    
-    <a href="/2022/10/10/Website-and-Passwall/" class="list-group-item list-group-item-action">
-      <time>10-10</time>
-      <div class="list-group-item-title">Website and Passwall</div>
-    </a>
+</div>
+
+
+              
   
-    
-    <a href="/2022/10/06/Trojan-Go-Build/" class="list-group-item list-group-item-action">
-      <time>10-06</time>
-      <div class="list-group-item-title">Trojan go 记录</div>
-    </a>
-  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Ares 2023赛季自动步兵（哨兵）技术方案</div>
+      <div>https://gequanyi.xyz/2022/11/07/2023-ares-auto-infantry-plan/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>aididiz</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年11月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年11月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/11/04/C-houjie-3/" title="【C++侯捷】面对对象高级编程（三）">
+                        <span class="hidden-mobile">【C++侯捷】面对对象高级编程（三）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -446,6 +626,99 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script defer src="/js/leancloud.js" ></script>
 
