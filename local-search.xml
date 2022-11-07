@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>在linux使用clash</title>
+    <link href="/2022/11/07/use-clash-on-linux/"/>
+    <url>/2022/11/07/use-clash-on-linux/</url>
+    
+    <content type="html"><![CDATA[<h1>Use Clash On Ubuntu</h1><blockquote><p>clash是一款多平台支持多协议的网络调试代理工具，由于笔者经常在linux平台做开发，常受一些软件源dns污染等问题，故在linux</p><p>端配置了工具，以记载。</p></blockquote><h2 id="Download-bin-file">Download bin file</h2><p>The executable flie  release on [<a href="https://github.com/Dreamacro/clash/releases">Releases · Dreamacro/clash (github.com)</a>], you should choose one of them depending on what your paltform is.Here I use arm64.</p><p><img src="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/202211071434020.webp" alt="image-20221107143447281"></p><p>To download this, we can use</p><p>in your /path/to</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://github.com/Dreamacro/clash/releases/download/v1.11.12/clash-linux-arm64-v1.11.12.gz<br></code></pre></td></tr></table></figure><p>but may be too slow,so you can find a mirror to speed up this.</p><p>After download this,</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">gunzip clash-linux-arm64-v1.11.12.gz<br></code></pre></td></tr></table></figure><p>where you can only find a bin file, rename it as clash for conveniet operate</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mv clash-linux-arm64-v1.11.12 clash<br></code></pre></td></tr></table></figure><blockquote><p>we can get usage by type <code>clash --help</code></p></blockquote><p>get country.mmdb</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://github.com/Dreamacro/maxmind-geoip/releases/download/20221012/Country.mmdb<br></code></pre></td></tr></table></figure><h2 id="Use-as-Daemon">Use as Daemon</h2><p>get config file</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -o config.yaml &quot;your subscribe url&quot;<br></code></pre></td></tr></table></figure><p>use root</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir /etc/clash<br>cp config.yaml Country.mmdb /etc/clash<br>cp clash /usr/local/bin <br></code></pre></td></tr></table></figure><p>run as daemon</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim /etc/systemd/system/clash.service<br></code></pre></td></tr></table></figure><p>paste this</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Unit]</span><br><span class="hljs-attr">Description</span>=Clash daemon, A rule-based proxy in Go.<br><span class="hljs-attr">After</span>=network.target<br><br><span class="hljs-section">[Service]</span><br><span class="hljs-attr">Type</span>=simple<br><span class="hljs-attr">Restart</span>=always<br><span class="hljs-attr">ExecStart</span>=/usr/local/bin/clash -d /etc/clash<br><br><span class="hljs-section">[Install]</span><br><span class="hljs-attr">WantedBy</span>=multi-user.target<br></code></pre></td></tr></table></figure><p>then enable</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">systemctl daemon-reload<br>systemctl enable clash<br>systemctl start clash<br></code></pre></td></tr></table></figure><p>watch</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">systemctl status clash<br></code></pre></td></tr></table></figure><h2 id="Use-in-you-client">Use in you client</h2><blockquote><p>Make sure your devices are in the same local area network</p></blockquote><h3 id="On-windows">On windows</h3><p>Using setting GUI, set proxy your_server_ip:7890</p><h3 id="On-linux">On linux</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">export http_proxy=http://ip:7890<br></code></pre></td></tr></table></figure><p>or set by GUI, for more you can search by <a href="https://google.com">https://google.com</a></p><h3 id="On-iPhone-Andriod">On iPhone/Andriod</h3><p>Go to wlan/WIFI settings, add proxy  <code>ip:7890</code></p><h2 id="Reference">Reference</h2><ul><li><a href="https://blog.iswiftai.com/posts/clash-linux/">在 Linux 中使用 Clash | CodeSwift (iswiftai.com)</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ares 2023赛季自动步兵（哨兵）技术方案</title>
     <link href="/2022/11/07/2023-ares-auto-infantry-plan/"/>
     <url>/2022/11/07/2023-ares-auto-infantry-plan/</url>
