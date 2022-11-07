@@ -14,20 +14,20 @@
   
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#30A9DE">
   <meta name="author" content="aididiz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Ares 2023赛季自动步兵（哨兵）技术方案 0. 概述 1. 机械 技术路线 （比较常规的可以简写） 成本核算 2. 硬件 3. 电控 4. 算法">
+    <meta name="description" content="Ares 2023赛季自动步兵（哨兵）技术方案 概述 机械 技术路线 （比较常规的可以简写） 成本核算 硬件 电控 算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ares 2023赛季自动步兵（哨兵）技术方案">
 <meta property="og:url" content="https://gequanyi.xyz/2022/11/07/2023-ares-auto-infantry-plan/index.html">
 <meta property="og:site_name" content="Quanyi Blog">
-<meta property="og:description" content="Ares 2023赛季自动步兵（哨兵）技术方案 0. 概述 1. 机械 技术路线 （比较常规的可以简写） 成本核算 2. 硬件 3. 电控 4. 算法">
+<meta property="og:description" content="Ares 2023赛季自动步兵（哨兵）技术方案 概述 机械 技术路线 （比较常规的可以简写） 成本核算 硬件 电控 算法">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://imghome-1302941983.cos.ap-beijing.myqcloud.com/img/RM.webp">
 <meta property="article:published_time" content="2022-11-07T02:26:41.000Z">
-<meta property="article:modified_time" content="2022-11-07T02:41:16.423Z">
+<meta property="article:modified_time" content="2022-11-07T02:45:37.390Z">
 <meta property="article:author" content="aididiz">
 <meta property="article:tag" content="rm">
 <meta name="twitter:card" content="summary_large_image">
@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"gequanyi.xyz","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"m6NhbupxmL8wIRV6ZF8mzKCg-gzGzoHsz","app_key":"dtjGXiWYbMrC6V2dMZhFgQ90","server_url":"https://m6nhbupx.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gequanyi.xyz","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"m6NhbupxmL8wIRV6ZF8mzKCg-gzGzoHsz","app_key":"dtjGXiWYbMrC6V2dMZhFgQ90","server_url":"https://m6nhbupx.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -217,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ares 2023赛季自动步兵（哨兵）技术方案"></span>
+            <span id="subtitle">Ares 2023赛季自动步兵（哨兵）技术方案</span>
           
         </div>
 
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          61 字
+          51 字
         
       </span>
     
@@ -311,14 +311,14 @@
               <div class="markdown-body">
                 
                 <h1>Ares 2023赛季自动步兵（哨兵）技术方案</h1>
-<h2 id="0-概述">0. 概述</h2>
-<h2 id="1-机械">1. 机械</h2>
+<h2 id="概述">概述</h2>
+<h2 id="机械">机械</h2>
 <h3 id="技术路线">技术路线</h3>
 <p>（比较常规的可以简写）</p>
 <h3 id="成本核算">成本核算</h3>
-<h2 id="2-硬件">2. 硬件</h2>
-<h2 id="3-电控">3. 电控</h2>
-<h2 id="4-算法">4. 算法</h2>
+<h2 id="硬件">硬件</h2>
+<h2 id="电控">电控</h2>
+<h2 id="算法">算法</h2>
 
                 
               </div>
@@ -601,21 +601,6 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
 
 
 
